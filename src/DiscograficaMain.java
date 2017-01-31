@@ -3,6 +3,6 @@
  */
 public class DiscograficaMain {
     public static void main(String[] args) {
-        
+
     }
 }
