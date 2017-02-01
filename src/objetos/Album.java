@@ -1,22 +1,13 @@
 package objetos;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import java.sql.Date;
-
 /**
- * Created by gand on 31/01/17.
+ * Created by Gand on 01/02/17.
  */
-@Entity
 public class Album {
     private int id;
     private String tituloAl;
-    private Date anio;
+    private Integer anio;
 
-    @Id
-    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -25,8 +16,6 @@ public class Album {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "titulo_al")
     public String getTituloAl() {
         return tituloAl;
     }
@@ -35,17 +24,14 @@ public class Album {
         this.tituloAl = tituloAl;
     }
 
-    @Basic
-    @Column(name = "anio")
-    public Date getAnio() {
+    public Integer getAnio() {
         return anio;
     }
 
-    public void setAnio(Date anio) {
+    public void setAnio(Integer anio) {
         this.anio = anio;
     }
 
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -59,7 +45,6 @@ public class Album {
         return true;
     }
 
-    @Override
     public int hashCode() {
         int result = id;
         result = 31 * result + (tituloAl != null ? tituloAl.hashCode() : 0);

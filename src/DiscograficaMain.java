@@ -1,5 +1,3 @@
-import objetos.Album;
-
 /**
  * Created by gand on 31/01/17.
  */

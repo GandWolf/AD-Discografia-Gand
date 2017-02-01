@@ -1,22 +1,14 @@
 package objetos;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
 /**
- * Created by gand on 31/01/17.
+ * Created by Gand on 01/02/17.
  */
-@Entity
 public class Cancion {
     private String titulo;
     private Integer duracion;
     private String letra;
     private Integer idAlbum;
 
-    @Id
-    @Column(name = "titulo")
     public String getTitulo() {
         return titulo;
     }
@@ -25,8 +17,6 @@ public class Cancion {
         this.titulo = titulo;
     }
 
-    @Basic
-    @Column(name = "duracion")
     public Integer getDuracion() {
         return duracion;
     }
@@ -35,8 +25,6 @@ public class Cancion {
         this.duracion = duracion;
     }
 
-    @Basic
-    @Column(name = "letra")
     public String getLetra() {
         return letra;
     }
@@ -45,8 +33,6 @@ public class Cancion {
         this.letra = letra;
     }
 
-    @Basic
-    @Column(name = "id_album")
     public Integer getIdAlbum() {
         return idAlbum;
     }
@@ -55,7 +41,6 @@ public class Cancion {
         this.idAlbum = idAlbum;
     }
 
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -70,7 +55,6 @@ public class Cancion {
         return true;
     }
 
-    @Override
     public int hashCode() {
         int result = titulo != null ? titulo.hashCode() : 0;
         result = 31 * result + (duracion != null ? duracion.hashCode() : 0);

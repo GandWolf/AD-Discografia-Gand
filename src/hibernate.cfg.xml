@@ -4,8 +4,10 @@
     "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <property name="connection.url"/>
-    <property name="connection.driver_class"/>
+    <property name="connection.url">jdbc:mysql://localhost:3306/discografica</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <mapping resource="HMapping.xml"/>
+    <mapping resource="JPAHMapping.xml"/>
     <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 
